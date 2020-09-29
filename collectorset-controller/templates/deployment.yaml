@@ -82,3 +82,5 @@ spec:
               items:
                 - key: config.yaml
                   path: config.yaml
+                - key: jaeger-config.yaml
+                  path: jaeger-config.yaml

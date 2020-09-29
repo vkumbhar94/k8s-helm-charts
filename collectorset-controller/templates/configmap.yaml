@@ -8,3 +8,7 @@ data:
     {{- if .Values.proxyURL }}
     proxy_url: {{ .Values.proxyURL }}
     {{- end }}
+  jaeger-config.yaml: |
+{{- with .Values.jaegerconf }}
+{{ toYaml . | indent 4 }}
+{{- end }}

@@ -39,3 +39,39 @@ collector:
   proxyPass: ""
   priorityClassName: ""
   tolerations: []
+jaegerconf:
+  serviceName: argus
+  disabled: false
+  rpc_metrics: false
+  tags:
+    - tagkey: tagvalue
+  sampler:
+    type: const
+    param: 1
+    samplingServerURL: ""
+    samplingRefreshInterval: "1m"
+    maxOperations: 1000
+    operationNameLateBinding: false
+  reporter:
+    queueSize: 100
+    logSpans: false
+    localAgentHostPort: ""
+    disableAttemptReconnecting: false
+    collectorEndpoint: ""
+    user: ""
+    password: ""
+    http_headers:
+      User-Agent: "Argus-Jaeger"
+  headers:
+    jaegerDebugHeader: ""
+    jaegerBaggageHeader: ""
+    TraceContextHeaderName: ""
+    traceBaggageHeaderPrefix: ""
+  baggage_restrictions:
+    denyBaggageOnInitializationFailure: false
+    hostPort: ""
+    refreshInterval: "10s"
+  throttler:
+    hostPort: ""
+    refreshInterval: "1m"
+    synchronousInitialization: false

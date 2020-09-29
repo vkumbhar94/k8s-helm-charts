@@ -92,4 +92,5 @@ spec:
                   path: rl-policy.yaml
                 - key: filters-config.yaml
                   path: filters-config.yaml
-
+                - key: jaeger-config.yaml
+                  path: jaeger-config.yaml
